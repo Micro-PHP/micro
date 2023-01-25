@@ -1,6 +1,6 @@
 {
-    "name": "micro/skeleton",
-    "description": "Micro Framework: Application skeleton",
+    "name": "micro/micro",
+    "description": "MicroPHP Framework: default plain application",
     "license": "MIT",
     "type": "project",
     "authors": [
