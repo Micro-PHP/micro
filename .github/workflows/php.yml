@@ -1,0 +1,41 @@
+name: Skeleton CI
+on:
+  push:
+    branches: [ 'master' ]
+  pull_request:
+    branches: [ 'master' ]
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Install PHP
+      uses: shivammathur/setup-php@v2
+      with:
+        coverage: none
+        php-version: 8.2
+
+    - name: Cache Composer packages
+      id: composer-cache
+      uses: actions/cache@v3
+      with:
+        php_version: 8.2
+        path: vendor
+        key: ${{ runner.os }}
+        restore-keys: |
+          ${{ runner.os }}-php-${{ hashFiles('**/composer.lock') }}
+
+    - name: Composer install
+      uses: ramsey/composer-install@v2
+      with:
+        composer-options: --prefer-dist --no-progress --no-cache
+
+    - name: Validate composer
+      run: composer test-all
