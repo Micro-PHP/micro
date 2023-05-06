@@ -32,6 +32,12 @@ jobs:
         restore-keys: |
           ${{ runner.os }}-php-${{ hashFiles('**/composer.lock') }}
 
+    - name: Test tools install
+      run: |
+        cd tests/tools/psalm; composer install; cd ../../..;
+        cd tests/tools/phpstan; composer install; cd ../../..;
+        cd tests/tools/php-cs-fixer; composer install; cd ../../..;
+
     - name: Composer install
       uses: ramsey/composer-install@v2
       with:

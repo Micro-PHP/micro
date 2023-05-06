@@ -10,6 +10,7 @@
         }
     ],
     "require": {
+        "php": ">=8.2",
         "micro/kernel-app": "^1.6",
         "micro/autowire": "^1.6",
         "micro/plugin-configuration-helper": "^1.6",
@@ -23,10 +24,7 @@
     },
     "require-dev": {
         "ergebnis/composer-normalize": "^2.29",
-        "phpstan/phpstan": "^1.9",
-        "phpunit/phpunit": "^9",
-        "vimeo/psalm": "^5",
-        "friendsofphp/php-cs-fixer": "^3.13"
+        "phpunit/phpunit": "^10.1"
     },
     "autoload": {
         "psr-4": {
@@ -64,16 +62,16 @@
             "@test-unit"
         ],
         "test-phpstan": [
-            "php vendor/bin/phpstan"
+            "php tests/tools/phpstan/vendor/bin/phpstan"
         ],
         "test-psalm": [
-            "php vendor/bin/psalm"
+            "php tests/tools/psalm/vendor/bin/psalm"
         ],
         "test-php-cs-try": [
-            "PHP_CS_FIXER_IGNORE_ENV=1 php vendor/bin/php-cs-fixer fix --verbose --dry-run --using-cache=no"
+            "PHP_CS_FIXER_IGNORE_ENV=1 php tests/tools/php-cs-fixer/vendor/bin/php-cs-fixer fix --verbose --dry-run --using-cache=no"
         ],
         "test-php-cs-fix": [
-            "PHP_CS_FIXER_IGNORE_ENV=1 php vendor/bin/php-cs-fixer fix --verbose --using-cache=no"
+            "PHP_CS_FIXER_IGNORE_ENV=1 php tests/tools/php-cs-fixer/vendor/bin/php-cs-fixer fix --verbose --using-cache=no"
         ],
         "test-unit": [
             "php vendor/bin/phpunit"
