@@ -2,21 +2,25 @@
 
 declare(strict_types=1);
 
-namespace App\Acme;
+namespace App\Blog;
 
+use App\Blog\Controller\IndexController;
 use Micro\Plugin\Http\Facade\HttpFacadeInterface;
 use Micro\Plugin\Http\Plugin\RouteProviderPluginInterface;
-use Symfony\Component\HttpFoundation\Response;
+use Micro\Plugin\Twig\Plugin\TwigTemplatePluginInterface;
+use Micro\Plugin\Twig\Plugin\TwigTemplatePluginTrait;
 
-class AcmePlugin implements RouteProviderPluginInterface
+class BlogPlugin implements RouteProviderPluginInterface, TwigTemplatePluginInterface
 {
+    use TwigTemplatePluginTrait;
+
     public function provideRoutes(HttpFacadeInterface $httpFacade): iterable
     {
         yield $httpFacade
             ->createRouteBuilder()
             ->setName('index')
             ->setUri('/')
-            ->setController(fn () => new Response('Hello, World. I\'m MicroPHP!'))
+            ->setController(IndexController::class)
             ->build();
     }
 }
