@@ -1,7 +1,7 @@
 <?php
 
 return [
-    // Separate system plugins from appliction plugins.
+    // Separate system plugins from application plugins.
     Micro\Plugin\Configuration\Helper\ConfigurationHelperPlugin::class,
     Micro\Plugin\Console\ConsolePlugin::class,
     Micro\Plugin\Http\HttpPackPlugin::class,
@@ -11,5 +11,5 @@ return [
     OleksiiBulba\WebpackEncorePlugin\WebpackEncorePlugin::class,
 
     //App plugin(s)
-    App\Acme\AcmePlugin::class,
+    App\Blog\BlogPlugin::class,
 ];
