@@ -1,0 +1,32 @@
+{
+    "name": "micro/plugin-amqp",
+    "description": "Micro Framework: rabbitmq support",
+    "license": "MIT",
+    "type": "micro-plugin",
+    "authors": [
+        {
+            "name": "Stanislau.Komar",
+            "email": "stanislau_komar@epam.com"
+        }
+    ],
+    "require": {
+        "ext-pcntl": "*",
+        "micro/kernel-app": "^2.0",
+        "micro/plugin-console": "^2.0",
+        "micro/plugin-event-emitter": "^2.0",
+        "micro/plugin-serializer": "^2.0",
+        "micro/plugin-uuid": "^2.0",
+        "php-amqplib/php-amqplib": "^3.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Micro\\Plugin\\Amqp\\": "/"
+        },
+        "exclude-from-classmap": [
+            "/Tests/"
+        ]
+    },
+    "config": {
+        "sort-packages": true
+    }
+}

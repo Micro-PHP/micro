@@ -1,0 +1,29 @@
+{
+    "name": "micro/plugin-logger-core",
+    "description": "Micro Framework: Logger plugin",
+    "license": "MIT",
+    "type": "micro-plugin",
+    "authors": [
+        {
+            "name": "Stanislau.Komar",
+            "email": "stanislau_komar@epam.com"
+        }
+    ],
+    "require": {
+        "micro/kernel": "^2.0",
+        "micro/kernel-boot-configuration": "^2.0",
+        "micro/kernel-boot-dependency": "^2.0",
+        "psr/log": "^1 || ^2 || ^3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Micro\\Plugin\\Logger\\": "/"
+        },
+        "exclude-from-classmap": [
+            "/Tests/"
+        ]
+    },
+    "config": {
+        "sort-packages": true
+    }
+}

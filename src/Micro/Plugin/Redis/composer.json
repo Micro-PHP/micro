@@ -1,0 +1,27 @@
+{
+    "name": "micro/plugin-redis",
+    "description": "Micro Framework: Redis component",
+    "license": "MIT",
+    "type": "micro-plugin",
+    "authors": [
+        {
+            "name": "Stanislau.Komar",
+            "email": "stanislau_komar@epam.com"
+        }
+    ],
+    "require": {
+        "ext-redis": "*",
+        "micro/kernel-app": "^2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Micro\\Plugin\\Redis\\": "/"
+        },
+        "exclude-from-classmap": [
+            "/Tests/"
+        ]
+    },
+    "config": {
+        "sort-packages": true
+    }
+}

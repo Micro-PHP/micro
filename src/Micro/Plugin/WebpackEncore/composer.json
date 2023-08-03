@@ -1,0 +1,37 @@
+{
+    "name": "micro/plugin-twig-webpack-encore",
+    "description": "This is a Micro plugin for webpack-encore support",
+    "license": "MIT",
+    "type": "micro-plugin",
+    "authors": [
+        {
+            "name": "Oleksii Bulba",
+            "email": "oleksii.bulba@gmail.com",
+            "homepage": "https://github.com/OleksiiBulba",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "micro/kernel-boot-configuration": "^2.0",
+        "micro/kernel-boot-plugin-depended": "^2.0",
+        "micro/plugin-twig": "^2.0",
+        "symfony/serializer": "^6.2 || ^6.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Micro\\Plugin\\WebpackEncore\\": "/"
+        },
+        "exclude-from-classmap": [
+            "/Tests/"
+        ]
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "thanks": {
+            "name": "symfony/webpack-encore-bundle",
+            "url": "https://github.com/symfony/webpack-encore-bundle"
+        }
+    }
+}

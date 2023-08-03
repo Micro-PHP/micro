@@ -1,0 +1,52 @@
+{
+    "name": "micro/dto",
+    "description": "Library for generating and validation DTO classes.",
+    "license": "MIT",
+    "type": "library",
+    "keywords": [
+        "dto",
+        "data transfer",
+        "transfer",
+        "data",
+        "object",
+        "generator",
+        "data transfer object",
+        "micro"
+    ],
+    "authors": [
+        {
+            "name": "Stanislau Komar",
+            "email": "stanislau_komar@epam.com"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "ext-dom": "*",
+        "ext-libxml": "*",
+        "nette/php-generator": "^4",
+        "psr/log": "^1 || ^2 || ^3",
+        "symfony/property-access": "^5.4 || ^6",
+        "symfony/validator": "^5.4 || ^6"
+    },
+    "require-dev": {
+        "symfony/expression-language": "^5.4 || ^6",
+        "symfony/intl": "^5.4 || ^6",
+        "symfony/var-dumper": "^5.4 || ^6"
+    },
+    "suggest": {
+        "ext-intl": "You need this PHP extension if you will be using `time_zone` alidator with option `intl_compatible`",
+        "symfony/expression-language": "You need this package if you will be using `Expression` validator",
+        "symfony/intl": "You need this package if you will be using `time_zone` alidator with option `intl_compatible`"
+    },
+    "autoload": {
+        "psr-4": {
+            "Micro\\Library\\DTO\\": "/"
+        },
+        "exclude-from-classmap": [
+            "/Tests/"
+        ]
+    },
+    "config": {
+        "sort-packages": true
+    }
+}

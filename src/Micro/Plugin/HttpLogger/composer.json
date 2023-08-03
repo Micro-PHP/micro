@@ -1,0 +1,27 @@
+{
+    "name": "micro/plugin-http-logger",
+    "description": "Micro Framework: Router actions logger",
+    "license": "MIT",
+    "type": "micro-plugin",
+    "authors": [
+        {
+            "name": "Stanislau Komar",
+            "email": "kost@micro-php.net"
+        }
+    ],
+    "require": {
+        "micro/plugin-http-core": "^2.0",
+        "micro/plugin-logger-core": "^2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Micro\\Plugin\\HttpLogger\\": "/"
+        },
+        "exclude-from-classmap": [
+            "/Tests/"
+        ]
+    },
+    "config": {
+        "sort-packages": true
+    }
+}

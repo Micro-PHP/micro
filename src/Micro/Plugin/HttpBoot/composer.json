@@ -1,0 +1,26 @@
+{
+    "name": "micro/plugin-http-boot",
+    "description": "Micro Framework: Lightweight HTTP router",
+    "license": "MIT",
+    "type": "micro-plugin",
+    "authors": [
+        {
+            "name": "Stanislau Komar",
+            "email": "kost@micro-php.net"
+        }
+    ],
+    "require": {
+        "micro/kernel-app": "^2.0",
+        "micro/kernel-boot-plugin-depended": "^2.0",
+        "micro/plugin-event-emitter": "^2.0",
+        "micro/plugin-http-core": "^2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Micro\\Plugin\\HttpBoot\\": "/"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    }
+}

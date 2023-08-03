@@ -1,0 +1,28 @@
+{
+    "name": "micro/kernel-boot-dependency",
+    "description": "Micro Framework: Kernel Boot loader - component to provide dependencies",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Stanislau Komar",
+            "email": "stanislau_komar@epam.com"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "micro/autowire": "^2.0",
+        "micro/kernel": "^2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Micro\\Framework\\BootDependency\\": "/"
+        },
+        "exclude-from-classmap": [
+            "/Tests/"
+        ]
+    },
+    "config": {
+        "sort-packages": true
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "name": "micro/plugin-http-exceptions",
+    "description": "Micro Framework: Exception response builder.",
+    "license": "MIT",
+    "type": "micro-plugin",
+    "authors": [
+        {
+            "name": "Stanislau Komar",
+            "email": "kost@micro-php.net"
+        }
+    ],
+    "require": {
+        "micro/plugin-http-core": "^2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Micro\\Plugin\\HttpExceptions\\": "/"
+        },
+        "exclude-from-classmap": [
+            "/Tests/"
+        ]
+    },
+    "config": {
+        "sort-packages": true
+    }
+}

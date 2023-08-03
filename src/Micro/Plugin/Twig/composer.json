@@ -1,0 +1,27 @@
+{
+    "name": "micro/plugin-twig",
+    "description": "Micro Framework: Http route locator from other plugins by plugin interface.",
+    "license": "MIT",
+    "type": "micro-plugin",
+    "authors": [
+        {
+            "name": "Stanislau Komar",
+            "email": "kost@micro-php.net"
+        }
+    ],
+    "require": {
+        "micro/kernel": "^2.0",
+        "micro/kernel-boot-configuration": "^2.0",
+        "micro/kernel-boot-dependency": "^2.0",
+        "micro/kernel-boot-plugin-depended": "^2.0",
+        "twig/twig": "^3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Micro\\Plugin\\Twig\\": "/"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    }
+}

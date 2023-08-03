@@ -1,0 +1,29 @@
+{
+    "name": "micro/plugin-console",
+    "description": "Micro Framework: Console application component",
+    "license": "MIT",
+    "type": "micro-plugin",
+    "authors": [
+        {
+            "name": "Stanislau.Komar",
+            "email": "stanislau_komar@epam.com"
+        }
+    ],
+    "require": {
+        "micro/kernel-app": "^2.0",
+        "micro/kernel-boot-dependency": "^2.0",
+        "micro/plugin-locator": "^2.0",
+        "symfony/console": "^6.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Micro\\Plugin\\Console\\": "/"
+        },
+        "exclude-from-classmap": [
+            "/Tests/"
+        ]
+    },
+    "config": {
+        "sort-packages": true
+    }
+}

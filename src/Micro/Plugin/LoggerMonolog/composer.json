@@ -1,0 +1,28 @@
+{
+    "name": "micro/plugin-logger-monolog",
+    "description": "Micro Framework: Monolog logger adapter for micro/plugin-logger-core.",
+    "license": "MIT",
+    "type": "micro-plugin",
+    "authors": [
+        {
+            "name": "Stanislau.Komar",
+            "email": "stanislau_komar@epam.com"
+        }
+    ],
+    "require": {
+        "micro/kernel-boot-plugin-depended": "^2.0",
+        "micro/plugin-logger-core": "^2.0",
+        "monolog/monolog": "^3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Micro\\Plugin\\LoggerMonolog\\": "/"
+        },
+        "exclude-from-classmap": [
+            "/Tests/"
+        ]
+    },
+    "config": {
+        "sort-packages": true
+    }
+}

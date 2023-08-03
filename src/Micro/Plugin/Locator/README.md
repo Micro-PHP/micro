@@ -1,0 +1,1 @@
+![GitHub Workflow Status](https://github.com/Micro-PHP/http-core/actions/workflows/ci.yaml/badge.svg)

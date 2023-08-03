@@ -1,0 +1,19 @@
+{
+    "entrypoints": {
+        "entrypoint1": {
+            "js": [
+                "/some/path/to/jsFile.js",
+                "/another/path/to/js/file.js",
+                "/build/app.js"
+            ]
+        },
+        "entrypoint2": {
+            "js": [
+                "/some/path/to/another/js/file.js"
+            ],
+            "css": [
+                "/some/path/to/js/file.css"
+            ]
+        }
+    }
+}

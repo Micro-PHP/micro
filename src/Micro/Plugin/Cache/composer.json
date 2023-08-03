@@ -1,0 +1,30 @@
+{
+    "name": "micro/plugin-cache",
+    "description": "Micro Framework: Plugin implements PSR6 and PSR16 cache",
+    "license": "MIT",
+    "type": "micro-plugin",
+    "authors": [
+        {
+            "name": "Stanislau.Komar",
+            "email": "stanislau_komar@epam.com"
+        }
+    ],
+    "require": {
+        "micro/kernel": "^2.0",
+        "micro/plugin-console": "^2.0",
+        "psr/cache": "^3.0",
+        "psr/simple-cache": "^3.0",
+        "symfony/cache": "^6"
+    },
+    "autoload": {
+        "psr-4": {
+            "Micro\\Plugin\\Cache\\": ""
+        },
+        "exclude-from-classmap": [
+            "/Tests/"
+        ]
+    },
+    "config": {
+        "sort-packages": true
+    }
+}

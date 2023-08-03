@@ -1,0 +1,33 @@
+{
+    "name": "micro/plugin-filesystem",
+    "description": "Micro Framework: Abstraction layer for filesystem operations.",
+    "license": "MIT",
+    "type": "micro-plugin",
+    "authors": [
+        {
+            "name": "Stanislau.Komar",
+            "email": "stanislau_komar@epam.com"
+        }
+    ],
+    "require": {
+        "league/flysystem": "^3.0",
+        "micro/kernel": "^2.0",
+        "micro/kernel-boot-configuration": "^2.0",
+        "micro/kernel-boot-dependency": "^2.0"
+    },
+    "suggest": {
+        "micro/plugin-filesystem-local": "^2.0",
+        "micro/plugin-filesystem-s3": "^2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Micro\\Plugin\\Filesystem\\": "/"
+        },
+        "exclude-from-classmap": [
+            "/Tests/"
+        ]
+    },
+    "config": {
+        "sort-packages": true
+    }
+}

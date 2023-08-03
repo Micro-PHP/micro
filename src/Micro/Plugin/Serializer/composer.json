@@ -1,0 +1,33 @@
+{
+    "name": "micro/plugin-serializer",
+    "description": "Micro Framework: Serializer plugin",
+    "license": "MIT",
+    "type": "micro-plugin",
+    "authors": [
+        {
+            "name": "Stanislau Komar",
+            "email": "stanislau_komar@epam.com"
+        },
+        {
+            "name": "Oleksii Bulba",
+            "email": "oleksii_bulba@epam.com"
+        }
+    ],
+    "require": {
+        "micro/kernel": "^2.0"
+    },
+    "suggest": {
+        "micro/plugin-serializer-symfony": "Symfony serializer provider for Micro PHP Framework"
+    },
+    "autoload": {
+        "psr-4": {
+            "Micro\\Plugin\\Serializer\\": "/"
+        },
+        "exclude-from-classmap": [
+            "/Tests/"
+        ]
+    },
+    "config": {
+        "sort-packages": true
+    }
+}

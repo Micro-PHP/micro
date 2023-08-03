@@ -1,0 +1,10 @@
+.idea
+vendor
+composer.lock
+coverage
+.phpunit.result.cache
+.php-cs-fixer.cache
+test-coverage-report
+phpunit.xml
+.php-cs-fixer.php
+phpstan.neon

@@ -1,0 +1,32 @@
+{
+    "name": "micro/plugin-http-core",
+    "description": "Micro Framework: Lightweight HTTP router",
+    "license": "MIT",
+    "type": "micro-plugin",
+    "authors": [
+        {
+            "name": "Stanislau Komar",
+            "email": "kost@micro-php.net"
+        }
+    ],
+    "require": {
+        "micro/autowire": "^2.0",
+        "micro/kernel": "^2.0",
+        "micro/kernel-boot-configuration": "^2.0",
+        "micro/kernel-boot-dependency": "^2.0",
+        "micro/kernel-boot-plugin-depended": "^2.0",
+        "micro/plugin-locator": "^2.0",
+        "symfony/http-foundation": "^6.2 || ^6.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Micro\\Plugin\\HttpCore\\": ""
+        },
+        "exclude-from-classmap": [
+            "/Tests/"
+        ]
+    },
+    "config": {
+        "sort-packages": true
+    }
+}

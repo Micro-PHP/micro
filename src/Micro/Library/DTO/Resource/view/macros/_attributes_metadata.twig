@@ -1,0 +1,20 @@
+{% macro addAttributesMetadata(properties) -%}
+
+   /**
+    * {@inheritdoc}
+    */
+    protected function attributesMetadata(): array
+    {
+        return [
+        {% for property in properties %}
+    '{{ property.name }}' => [
+                'is_collection'     =>  {% if property.is_collection %} true {% else %} false {% endif %},
+                'type'              => '{{ property.type }}',
+                'actionName'        => '{{ property.actionName }}',
+                'required'          => {% if property.required -%} true {%- else -%} false {%- endif -%},
+                'dto'               => {% if property.dto %}'{{property.dto}}' {% else %} false {% endif %},
+            ],
+
+        {% endfor %}];
+    }
+{% endmacro %}

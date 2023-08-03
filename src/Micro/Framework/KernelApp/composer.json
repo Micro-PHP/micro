@@ -1,0 +1,31 @@
+{
+    "name": "micro/kernel-app",
+    "description": "Micro Framework: App Kernel component",
+    "license": "MIT",
+    "type": "micro-library",
+    "authors": [
+        {
+            "name": "Stanislau.Komar",
+            "email": "stanislau_komar@epam.com"
+        }
+    ],
+    "require": {
+        "micro/kernel": "^2.0",
+        "micro/kernel-boot-configuration": "^2.0",
+        "micro/kernel-boot-dependency": "^2.0",
+        "micro/kernel-boot-plugin-depended": "^2.0",
+        "micro/plugin-event-emitter": "^2.0",
+        "micro/plugin-locator": "^2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Micro\\Framework\\KernelApp\\": "/"
+        },
+        "exclude-from-classmap": [
+            "/Tests/"
+        ]
+    },
+    "config": {
+        "sort-packages": true
+    }
+}

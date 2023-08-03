@@ -2,7 +2,7 @@
     "name": "micro/micro",
     "description": "MicroPHP Framework: default plain application",
     "license": "MIT",
-    "type": "project",
+    "type": "library",
     "authors": [
         {
             "name": "Stanislau Komar",
@@ -10,37 +10,57 @@
         }
     ],
     "require": {
-        "php": ">=8.2",
-        "micro/kernel-app": "^1.6",
-        "micro/autowire": "^1.6",
-        "micro/plugin-configuration-helper": "^1.6",
-        "micro/plugin-console": "^1.6",
-        "micro/plugin-http-pack": "^1.6",
-        "micro/plugin-logger-monolog": "^1",
-        "vlucas/phpdotenv": "^5.4",
-        "micro/plugin-doctrine": "^1.6.0",
-        "micro/plugin-twig": "^1.6",
-        "micro/plugin-twig-webpack-encore": "^1.6"
+        "php": "^8.2",
+        "ext-dom": "*",
+        "ext-libxml": "*",
+        "ext-redis": "*",
+        "ext-pcntl": "*",
+        "doctrine/orm": "^2",
+        "elasticsearch/elasticsearch": "^8",
+        "nette/php-generator": "^4",
+        "psr/log": "^1 || ^2 || ^3",
+        "symfony/property-access": "^5.4 || ^6.1 || ^6.2 || ^6.3",
+        "symfony/finder": "^6.2 || ^6.3",
+        "symfony/validator": "^5.4.15 || ^6",
+        "symfony/console": "^6.0",
+        "symfony/http-foundation": "^6.2 || ^6.3",
+        "symfony/serializer": "^6.2 || ^6.3",
+        "firebase/php-jwt": "^6",
+        "php-amqplib/php-amqplib": "^3.1",
+        "php-ffmpeg/php-ffmpeg": "^1.0",
+        "league/flysystem": "^3.0",
+        "league/oauth2-client": "^2",
+        "psr/cache": "^3.0",
+        "psr/simple-cache": "^3.0",
+        "symfony/cache": "^6",
+        "monolog/monolog": "^3",
+        "twig/twig": "^3",
+        "ramsey/uuid": "^4.2"
+    },
+    "replace": {
+        "micro/kernel": "self.version"
     },
     "require-dev": {
-        "ergebnis/composer-normalize": "^2.29",
-        "phpunit/phpunit": "^10.1"
+        "ergebnis/composer-normalize": "^2.34",
+        "phpunit/phpunit": "^10.1",
+        "symfony/expression-language": "^5.4 || ^6",
+        "symfony/intl": "^5.4 || ^6",
+        "symfony/var-dumper": "^5.4 || ^6"
     },
     "autoload": {
         "psr-4": {
-            "App\\": "src/"
-        }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "App\\Test\\Unit\\": "tests/Unit"
+            "Micro\\Framework\\": "src/Micro/Framework",
+            "Micro\\Library\\": "src/Micro/Library",
+            "Micro\\Plugin\\": "src/Micro/Plugin"
         }
     },
     "config": {
         "allow-plugins": {
-            "ergebnis/composer-normalize": true
+            "ergebnis/composer-normalize": true,
+            "php-http/discovery": true
         }
     },
+    "minimum-stability": "dev",
     "scripts": {
         "post-install-cmd": [
             "@auto-scripts"
@@ -49,7 +69,6 @@
             "@auto-scripts"
         ],
         "auto-scripts": [
-            "@test-all"
         ],
         "front-build": [
             "yarn install",
@@ -68,10 +87,10 @@
             "php tests/tools/psalm/vendor/bin/psalm"
         ],
         "test-php-cs-try": [
-            "PHP_CS_FIXER_IGNORE_ENV=1 php tests/tools/php-cs-fixer/vendor/bin/php-cs-fixer fix --verbose --dry-run --using-cache=no"
+            "php tests/tools/php-cs-fixer/vendor/bin/php-cs-fixer fix --verbose --dry-run --using-cache=no"
         ],
         "test-php-cs-fix": [
-            "PHP_CS_FIXER_IGNORE_ENV=1 php tests/tools/php-cs-fixer/vendor/bin/php-cs-fixer fix --verbose --using-cache=no"
+            "php tests/tools/php-cs-fixer/vendor/bin/php-cs-fixer fix --verbose --using-cache=no"
         ],
         "test-unit": [
             "php vendor/bin/phpunit"

@@ -1,0 +1,29 @@
+{
+    "name": "micro/plugin-doctrine",
+    "description": "Micro Framework: Doctrine ORM Supports",
+    "license": "MIT",
+    "type": "micro-plugin",
+    "authors": [
+        {
+            "name": "Stanislau.Komar",
+            "email": "stanislau_komar@epam.com"
+        }
+    ],
+    "require": {
+        "doctrine/orm": "^2",
+        "micro/kernel": "^2.0",
+        "micro/plugin-console": "^2.0",
+        "symfony/cache": "^6"
+    },
+    "autoload": {
+        "psr-4": {
+            "Micro\\Plugin\\Doctrine\\": "/"
+        },
+        "exclude-from-classmap": [
+            "/Tests"
+        ]
+    },
+    "config": {
+        "sort-packages": true
+    }
+}

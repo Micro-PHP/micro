@@ -1,0 +1,23 @@
+{
+    "name": "micro/plugin-security",
+    "description": "Micro Framework: Security component",
+    "type": "micro-plugin",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Micro\\Plugin\\Security\\": "/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Stanislau Komar",
+            "email": "stanislau_komar@epam.com"
+        }
+    ],
+    "require": {
+        "firebase/php-jwt": "^6"
+    },
+    "config": {
+        "sort-packages": true
+    }
+}

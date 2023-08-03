@@ -1,7 +1,0 @@
-#!/usr/bin/env php
-<?php
-
-declare(strict_types=1);
-
-$callback = include dirname(__FILE__) . '/../src/Kernel.php';
-$callback()->run();
