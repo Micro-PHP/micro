@@ -6,7 +6,7 @@
     "authors": [
         {
             "name": "Stanislau Komar",
-            "email": "stanislau_komar@epam.com"
+            "email": "kost@micro-php.net"
         }
     ],
     "require": {
@@ -53,7 +53,6 @@
             "@auto-scripts"
         ],
         "auto-scripts": [
-            "@test-all"
         ],
         "front-build": [
             "yarn install",
