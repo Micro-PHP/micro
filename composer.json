@@ -24,7 +24,8 @@
     },
     "require-dev": {
         "ergebnis/composer-normalize": "^2.29",
-        "phpunit/phpunit": "^10.1"
+        "phpunit/phpunit": "^10.1",
+        "vimeo/psalm": "^5.15"
     },
     "autoload": {
         "psr-4": {
