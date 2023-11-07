@@ -25,7 +25,10 @@
     "require-dev": {
         "ergebnis/composer-normalize": "^2.29",
         "phpunit/phpunit": "^10.1",
-        "vimeo/psalm": "^5.15"
+        "vimeo/psalm": "^5.15",
+        "phpstan/phpstan": "^1.10",
+        "friendsofphp/php-cs-fixer": "^3.13",
+        "phpunit/php-code-coverage": "^10.1"
     },
     "autoload": {
         "psr-4": {
@@ -63,16 +66,16 @@
             "@test-unit"
         ],
         "test-phpstan": [
-            "php tests/tools/phpstan/vendor/bin/phpstan"
+            "php vendor/bin/phpstan"
         ],
         "test-psalm": [
-            "php tests/tools/psalm/vendor/bin/psalm"
+            "php vendor/bin/psalm"
         ],
         "test-php-cs-try": [
-            "PHP_CS_FIXER_IGNORE_ENV=1 php tests/tools/php-cs-fixer/vendor/bin/php-cs-fixer fix --verbose --dry-run --using-cache=no"
+            "PHP_CS_FIXER_IGNORE_ENV=1 php vendor/bin/php-cs-fixer fix --verbose --dry-run --using-cache=no"
         ],
         "test-php-cs-fix": [
-            "PHP_CS_FIXER_IGNORE_ENV=1 php tests/tools/php-cs-fixer/vendor/bin/php-cs-fixer fix --verbose --using-cache=no"
+            "PHP_CS_FIXER_IGNORE_ENV=1 php vendor/bin/php-cs-fixer fix --verbose --using-cache=no"
         ],
         "test-unit": [
             "php vendor/bin/phpunit"
