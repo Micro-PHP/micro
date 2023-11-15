@@ -17,7 +17,6 @@ use Micro\Framework\DependencyInjection\Container;
 use Micro\Framework\Kernel\KernelBuilder;
 use Micro\Framework\Kernel\KernelInterface;
 use Micro\Framework\Kernel\Plugin\PluginBootLoaderInterface;
-use PHPUnit\Framework\MockObject\MockObject;
 use PHPUnit\Framework\TestCase;
 
 class KernelBuilderTest extends TestCase
@@ -68,7 +67,7 @@ class KernelBuilderTest extends TestCase
         $kernel->run();
     }
 
-    protected function createBootLoader(): MockObject|PluginBootLoaderInterface
+    protected function createBootLoader()
     {
         $bl = $this->createMock(PluginBootLoaderInterface::class);
         $bl

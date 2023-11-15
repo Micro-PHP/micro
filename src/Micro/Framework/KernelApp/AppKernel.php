@@ -100,11 +100,17 @@ class AppKernel implements AppKernelInterface
         $this->isTerminated = true;
     }
 
+    /**
+     * {@inheritDoc}
+     */
     public function environment(): string
     {
         return $this->environment;
     }
 
+    /**
+     * {@inheritDoc}
+     */
     public function isDevMode(): bool
     {
         return str_starts_with($this->environment(), 'dev');

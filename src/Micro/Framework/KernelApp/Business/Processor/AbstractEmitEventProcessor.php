@@ -16,8 +16,6 @@ use Micro\Framework\EventEmitter\EventInterface;
 use Micro\Framework\KernelApp\AppKernelInterface;
 use Micro\Framework\KernelApp\Business\KernelActionProcessorInterface;
 use Micro\Plugin\EventEmitter\EventsFacadeInterface;
-use Psr\Container\ContainerExceptionInterface;
-use Psr\Container\NotFoundExceptionInterface;
 
 abstract class AbstractEmitEventProcessor implements KernelActionProcessorInterface
 {
@@ -31,8 +29,8 @@ abstract class AbstractEmitEventProcessor implements KernelActionProcessorInterf
     abstract protected function createEvent(AppKernelInterface $appKernel): EventInterface;
 
     /**
-     * @throws ContainerExceptionInterface
-     * @throws NotFoundExceptionInterface
+     * @throws \Psr\Container\ContainerExceptionInterface
+     * @throws \Psr\Container\NotFoundExceptionInterface
      *
      * @psalm-suppress MoreSpecificReturnType
      */

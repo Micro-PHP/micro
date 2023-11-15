@@ -17,6 +17,9 @@
         "micro/plugin-event-emitter": "^2.0",
         "micro/plugin-locator": "^2.0"
     },
+    "require-dev": {
+        "ergebnis/composer-normalize": "^2.34"
+    },
     "autoload": {
         "psr-4": {
             "Micro\\Framework\\KernelApp\\": "/"
@@ -26,6 +29,10 @@
         ]
     },
     "config": {
+        "allow-plugins": {
+            "ergebnis/composer-normalize": true
+        },
         "sort-packages": true
-    }
+    },
+    "minimum-stability": "dev"
 }

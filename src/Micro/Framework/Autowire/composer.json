@@ -11,7 +11,15 @@
     ],
     "require": {
         "php": "^8.2",
-        "micro/dependency-injection": "^2.0"
+        "micro/dependency-injection": "^1.6"
+    },
+    "require-dev": {
+        "ergebnis/composer-normalize": "^2.29",
+        "friendsofphp/php-cs-fixer": "^3.13",
+        "phpstan/phpstan": "^1.9",
+        "phpunit/php-code-coverage": "^9.2",
+        "phpunit/phpunit": "^9.5",
+        "vimeo/psalm": "^5.2"
     },
     "autoload": {
         "psr-4": {
@@ -22,6 +30,10 @@
         ]
     },
     "config": {
+        "allow-plugins": {
+            "ergebnis/composer-normalize": true
+        },
         "sort-packages": true
-    }
+    },
+    "minimum-stability": "dev"
 }

@@ -129,7 +129,7 @@ class AppKernelTest extends TestCase
         $this->assertEquals($app->environment(), $env);
     }
 
-    public static function dataProviderIsDevMode(): array
+    public function dataProviderIsDevMode()
     {
         return [
             ['dev', true],

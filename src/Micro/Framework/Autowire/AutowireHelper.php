@@ -16,11 +16,10 @@ use Psr\Container\ContainerExceptionInterface;
 use Psr\Container\ContainerInterface;
 use Psr\Container\NotFoundExceptionInterface;
 
-readonly class AutowireHelper implements AutowireHelperInterface
+class AutowireHelper implements AutowireHelperInterface
 {
-    public function __construct(
-        private ContainerInterface $container
-    ) {
+    public function __construct(private ContainerInterface $container)
+    {
     }
 
     public function autowire(string|array|callable $target): callable
@@ -98,13 +97,12 @@ readonly class AutowireHelper implements AutowireHelperInterface
                 return \call_user_func([$object, $method], ...$arguments); // @phpstan-ignore-line
             } catch (\InvalidArgumentException $exception) {
                 $this->throwAutowireException($target, '', $exception);
+            } catch (AutowireException $exception) {
+                throw $exception;
             }
         };
     }
 
-    /**
-     * @throws ContainerExceptionInterface
-     */
     protected function resolveStringAsObject(string $target): object
     {
         if (!class_exists($target)) {
@@ -136,6 +134,9 @@ readonly class AutowireHelper implements AutowireHelperInterface
         throw new AutowireException(sprintf('Can not autowire "%s". %s', $target, $message), 0, $parent);
     }
 
+    /**
+     * @phpstan-ignore-next-line
+     */
     protected function resolveArguments(string|array|object $target, ?string $method = null): array
     {
         if (\is_callable($target) && !$method && !\is_string($target)) {
@@ -161,8 +162,10 @@ readonly class AutowireHelper implements AutowireHelperInterface
     }
 
     /**
-     * @throws ContainerExceptionInterface
+     * @throws \Psr\Container\ContainerExceptionInterface
      * @throws NotFoundExceptionInterface
+     *
+     * @phpstan-ignore-next-line
      */
     private function resolveArgumentsFromReflectionParametersObject(array $reflectionParameters): array
     {
