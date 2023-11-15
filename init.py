@@ -35,17 +35,18 @@ def init_repo(folder, repo):
     return repo_obj
 
 def fetch_and_checkout(repo_obj, branch):
+    package = repo_obj.remotes.origin.url.split("/")[-1].split(".")[0]
     if repo_obj.active_branch.name == branch:
-        logging.info(f"Repository is already on {branch} branch in {repo_obj.working_dir}")
+        logging.info(f"Repository is already on {branch} branch for {package}")
         return
-    logging.info(f"Fetching from remote origin {repo_obj.remotes.origin.url} to {repo_obj.working_dir}")
+    logging.info(f"Fetching from remote origin {repo_obj.remotes.origin.url} to {package}")
     repo_obj.git.fetch()
     try:
-        logging.info(f"Checking out branch {branch} in {repo_obj.working_dir}")
+        logging.info(f"Checking out branch {branch} in {package}")
         repo_obj.git.checkout("-f", branch)
     except git.exc.GitCommandError:
-        logging.info(f"Branch {branch} does not exist in {repo_obj.working_dir}")
-        raise MissingBranchError(f"Branch {branch} does not exist in {repo_obj.working_dir}")
+        logging.info(f"Branch {branch} does not exist in {package}")
+        raise MissingBranchError(f"Branch {branch} does not exist in {package}")
 
 missing_branch = []
 
@@ -58,6 +59,5 @@ for package, folder in packages.items():
         fetch_and_checkout(repo_obj, current_branch)
     except MissingBranchError as e:
         missing_branch.append(package)
-    repo_obj = None
 
 print(f"The following packages do not have the {current_branch} branch: {missing_branch}")
