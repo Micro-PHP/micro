@@ -1,0 +1,32 @@
+{
+    "name": "micro/plugin-http-roadrunner",
+    "description": "Micro Framework: HTTP Roadrunner adapter",
+    "license": "MIT",
+    "type": "micro-plugin",
+    "authors": [
+        {
+            "name": "Stanislau Komar",
+            "email": "kost@micro-php.net"
+        }
+    ],
+    "require": {
+        "micro/kernel-app": "^1.6",
+        "micro/kernel-boot-plugin-depended": "^1.6",
+        "micro/plugin-event-emitter": "^1.6",
+        "micro/plugin-http-core": "^1.6",
+        "nyholm/psr7": "^1.8",
+        "spiral/roadrunner": "^2.0",
+        "symfony/psr-http-message-bridge": "^2.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Micro\\Plugin\\HttpRoadrunner\\": "/"
+        },
+        "exclude-from-classmap": [
+            "/Tests/"
+        ]
+    },
+    "config": {
+        "sort-packages": true
+    }
+}
