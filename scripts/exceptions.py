@@ -1,0 +1,3 @@
+
+class MissingBranchError(Exception):
+    pass
