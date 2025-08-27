@@ -14,19 +14,15 @@
     </projectFiles>
 
     <issueHandlers>
+        <PossiblyUnusedMethod>
+            <errorLevel type="suppress">
+                <file name="src/" />
+            </errorLevel>
+        </PossiblyUnusedMethod>
         <UnusedClass>
             <errorLevel type="suppress">
                 <directory name="src/"/>
             </errorLevel>
         </UnusedClass>
-        <UnnecessaryVarAnnotation>
-            <errorLevel type="suppress">
-                <directory name="src/"/>
-            </errorLevel>
-        </UnnecessaryVarAnnotation>
-        <InaccessibleProperty>
-            <errorLevel type="suppress">
-            </errorLevel>
-        </InaccessibleProperty>
     </issueHandlers>
 </psalm>
