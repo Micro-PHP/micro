@@ -23,7 +23,7 @@
         "micro/plugin-twig-webpack-encore": "^1.6"
     },
     "require-dev": {
-        "ergebnis/composer-normalize": "^2.29",
+        "ergebnis/composer-normalize": "^2",
         "phpunit/phpunit": "^12",
         "vimeo/psalm": "^7",
         "phpstan/phpstan": "^2",
