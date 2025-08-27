@@ -16,7 +16,7 @@
     <issueHandlers>
         <PossiblyUnusedMethod>
             <errorLevel type="suppress">
-                <file name="src/" />
+                <directory name="src/" />
             </errorLevel>
         </PossiblyUnusedMethod>
         <UnusedClass>
