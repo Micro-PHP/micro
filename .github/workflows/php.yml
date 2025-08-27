@@ -20,13 +20,13 @@ jobs:
       uses: shivammathur/setup-php@v2
       with:
         coverage: none
-        php-version: 8.2
+        php-version: 8.4
 
     - name: Cache Composer packages
       id: composer-cache
       uses: actions/cache@v3
       with:
-        php_version: 8.2
+        php_version: 8.4
         path: vendor
         key: ${{ runner.os }}
         restore-keys: |

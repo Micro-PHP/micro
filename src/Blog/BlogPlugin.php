@@ -14,6 +14,7 @@ class BlogPlugin implements RouteProviderPluginInterface, TwigTemplatePluginInte
 {
     use TwigTemplatePluginTrait;
 
+    #[\Override]
     public function provideRoutes(HttpFacadeInterface $httpFacade): iterable
     {
         yield $httpFacade

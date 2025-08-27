@@ -10,7 +10,7 @@
         }
     ],
     "require": {
-        "php": ">=8.2",
+        "php": ">=8.4",
         "micro/kernel-app": "^1.6",
         "micro/autowire": "^1.6",
         "micro/plugin-configuration-helper": "^1.6",
@@ -23,12 +23,12 @@
         "micro/plugin-twig-webpack-encore": "^1.6"
     },
     "require-dev": {
-        "ergebnis/composer-normalize": "^2.29",
-        "phpunit/phpunit": "^10.1",
-        "vimeo/psalm": "^5.15",
-        "phpstan/phpstan": "^1.10",
-        "friendsofphp/php-cs-fixer": "^3.13",
-        "phpunit/php-code-coverage": "^10.1"
+        "ergebnis/composer-normalize": "^2",
+        "phpunit/phpunit": "^12",
+        "vimeo/psalm": "^6",
+        "phpstan/phpstan": "^2",
+        "friendsofphp/php-cs-fixer": "^3",
+        "phpunit/php-code-coverage": "^12"
     },
     "autoload": {
         "psr-4": {
