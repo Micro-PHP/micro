@@ -14,6 +14,11 @@
     </projectFiles>
 
     <issueHandlers>
+        <UnusedClass>
+            <errorLevel type="suppress">
+                <directory name="src/"/>
+            </errorLevel>
+        </UnusedClass>
         <UnnecessaryVarAnnotation>
             <errorLevel type="suppress">
                 <directory name="src/"/>
