@@ -25,7 +25,7 @@
     "require-dev": {
         "ergebnis/composer-normalize": "^2",
         "phpunit/phpunit": "^12",
-        "vimeo/psalm": "^7",
+        "vimeo/psalm": "^6",
         "phpstan/phpstan": "^2",
         "friendsofphp/php-cs-fixer": "^3",
         "phpunit/php-code-coverage": "^12"
